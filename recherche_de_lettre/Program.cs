@@ -33,7 +33,7 @@ namespace recherche_de_lettre
                     Console.WriteLine("Le caractère est écrit : " + occurance + " fois");
                 }
                 Console.WriteLine("Recommencer? oui/non");
-                recommencer = Console.ReadLine();
+                recommencer = Console.ReadLine(); 
             }
         }
     }
