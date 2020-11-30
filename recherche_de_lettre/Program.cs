@@ -11,9 +11,14 @@ namespace recherche_de_lettre
             {
                 string chaine;
                 char caractere;
-                int occurance = 0;
-                Console.WriteLine("Veuillez écrire votre chaîne de caractères");
-                chaine = Console.ReadLine();
+                int occurence = 0;
+                do
+                {
+                    Console.WriteLine("Veuillez écrire votre chaîne de caractères");
+                    chaine = Console.ReadLine();
+                }
+                while(chaine[chaine.Length -1] != '.');
+                   
                 if (chaine.Length==1 && chaine[0] =='.')
                 {
                     Console.WriteLine("La chaîne est vide !");
@@ -26,11 +31,19 @@ namespace recherche_de_lettre
                     {
                         if (chaine[i] == caractere)
                         {
-                            occurance++;
+                            occurence++;
                         }
                         
                     }
-                    Console.WriteLine("Le caractère est écrit : " + occurance + " fois");
+                    if (occurence == 0)
+                    {
+                        Console.WriteLine("Le carcatère n'est pas présent dans la chaine");
+                    }
+                    else 
+                    {
+                    
+                    Console.WriteLine("Le caractère est écrit : " + occurence + " fois");
+                    }
                 }
                 Console.WriteLine("Recommencer? oui/non");
                 recommencer = Console.ReadLine(); 
